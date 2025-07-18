@@ -4,11 +4,11 @@
     "slug": "app-bookstore2",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/images/icon.jpg",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash-icon.png",
+      "image": "https://i.pinimg.com/736x/ae/3c/c5/ae3cc52638693bc16a4f19522fc86c77.jpg",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -17,13 +17,16 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "https://i.pinimg.com/736x/ae/3c/c5/ae3cc52638693bc16a4f19522fc86c77.jpg",
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true
     },
     "web": {
-      "favicon": "./assets/favicon.png"
-    }
+      "favicon": "./assets/images/icon.jpg"
+    },
+    "plugins": [
+      "expo-audio"
+    ]
   }
 }

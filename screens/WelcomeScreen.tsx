@@ -1,7 +1,20 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity, ImageBackground } from 'react-native';
 import React from 'react';
 
+import { AudioPlayer, useAudioPlayer } from 'expo-audio';
+
+const audioSource = require('../assets/audio/btninicio.mp3');
+
 export default function WelcomeScreen({ navigation }: any) {
+
+
+  const player = useAudioPlayer(audioSource);
+
+
+
+
+
+
     return (
         <ImageBackground
         style={styles.container}
@@ -21,11 +34,23 @@ export default function WelcomeScreen({ navigation }: any) {
  
            
 
-            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Login')}>
+            <TouchableOpacity style={styles.button} 
+            
+            onPress={() => {
+                player.seekTo(0);
+                player.play();
+                navigation.navigate('Login')}}>
+
                 <Text style={styles.buttonText}>Iniciar Sesion</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Register')}>
+            <TouchableOpacity style={styles.button} 
+            onPress={() => 
+            {
+                player.seekTo(0);
+                player.play();
+                navigation.navigate('Register')}}
+            >
                 <Text style={styles.buttonText}>Registrarse</Text>
             </TouchableOpacity>
        
